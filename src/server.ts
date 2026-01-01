@@ -24,7 +24,9 @@ app.get("/api/wopi-url", (req, res) => {
   );
 
   const officeUrl =
-    `https://view.officeapps.live.com/op/embed.aspx?src=${wopiSrc}`;
+    `https://word-edit.officeapps.live.com/we/wordeditorframe.aspx` +
+    `?WOPISrc=${wopiSrc}` +
+    `&access_token=${token}`;
 
   res.json({ officeUrl, token });
 });
