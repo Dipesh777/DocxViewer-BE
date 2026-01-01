@@ -6,7 +6,7 @@ import { getFile } from "./wopi/getFile.js";
 import { generateToken } from "./utils/token.js";
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(express.json());
@@ -20,7 +20,7 @@ app.get("/api/wopi-url", (req, res) => {
   const token = generateToken();
 
   const wopiSrc = encodeURIComponent(
-    "http://docxviewer-be-production.up.railway.app/wopi/files/1"
+    "https://docxviewer-be-production.up.railway.app/wopi/files/1"
   );
 
   const officeUrl =

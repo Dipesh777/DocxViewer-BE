@@ -6,6 +6,7 @@ export const checkFileInfo = (req: Request, res: Response): void => {
   console.log('checkfileinfo called')
   const filePath = path.join(__dirname, "../files/sample.docx");
   const stats = fs.statSync(filePath);
+  console.log('check filepath')
 
   res.json({
     BaseFileName: "sample.docx",
