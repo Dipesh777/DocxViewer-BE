@@ -1,9 +1,9 @@
 // src/server.ts
 import express from "express";
 import cors from "cors";
-import { checkFileInfo } from "./wopi/checkFileInfo";
-import { getFile } from "./wopi/getFile";
-import { generateToken } from "./utils/token";
+import { checkFileInfo } from "./wopi/checkFileInfo.js";
+import { getFile } from "./wopi/getFile.js";
+import { generateToken } from "./utils/token.js";
 
 const app = express();
 const PORT = 4000;
