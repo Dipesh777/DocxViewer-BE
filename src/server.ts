@@ -20,7 +20,7 @@ app.get("/api/wopi-url", (req, res) => {
   const token = generateToken();
 
   const wopiSrc = encodeURIComponent(
-    "http://docxviewer-be.railway.internal/wopi/files/1"
+    "http://docxviewer-be-production.up.railway.app/wopi/files/1"
   );
 
   const officeUrl =
