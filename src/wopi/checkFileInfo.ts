@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 
 export const checkFileInfo = (req: Request, res: Response): void => {
+  console.log('checkfileinfo called')
   const filePath = path.join(__dirname, "../files/sample.docx");
   const stats = fs.statSync(filePath);
 

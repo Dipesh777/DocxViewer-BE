@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 
 export const getFile = (req: Request, res: Response): void => {
+  console.log("GetFile called");
   const filePath = path.join(__dirname, "../files/sample.docx");
 
   res.setHeader(
